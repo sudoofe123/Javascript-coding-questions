@@ -129,3 +129,22 @@ const str2=str.charAt(0).toUpperCase()+str.slice(1); //Sudhanshu
  console.log(str2);
 
 
+const str = 'i am learning to code';
+
+//split the above string into an array of strings 
+//whenever a blank space is encountered
+const arr = str.split(" ");
+for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+}
+//Join all the elements of the array back into a string 
+//using a blankspace as a separator 
+const str2 = arr.join(" ");
+console.log(str2);//I Am Learning To Code
+
+
+
+
+
+
+
