@@ -30,9 +30,6 @@ console.log(uniqueAges) //[ 10, 22, 11, 23, 3 ]
 const array=[{name:"sudhanshu",age:22 },{name:"rithik",age:"23",{name:"shubham",age:"24"},{name:"vikku",age:24}]
 const uniqueAges=[...new Set(array.map(item=>item.age))];
 
-
-
-
 //Distinct property values of an array of objects
 
 const array=[{name:"sudhanshu",age:22 },{name:"rithik",age:23},{name:"shubham",age:24},{name:"vikku",age:24},{name:"shubham",age:27}]
@@ -41,5 +38,94 @@ const uniqueName=[...new Set(array.map(item=>item.name))]
 console.log(uniqueAges,uniqueName); // [ 22, 23, 24, 27 ] [ 'sudhanshu', 'rithik', 'shubham', 'vikku' ]
 
 
+//4.check anagram of a string
+
+function checkAnagram(){
+    const str1="sud";
+    const str2="dus";
+    let sortedStr1=str1.split("").sort().join("");
+    // console.log(sortedStr1); //dsu
+      let sortedStr2=str2.split("").sort().join("");
+    // console.log(sortedStr2); //dsu
+    if(sortedStr1===sortedStr2 ){
+        return true;
+    }
+    return false;
+}
+checkAnagram();
+
+
+//5.check a string is palindrome or not
+function checkPalindrome(string){
+
+const strVal=string.split(""); // [ 'r', 'o', 't', 'a', 't', 'o', 'r' ]
+const reverseEl=strVal.reverse();// [ 'r', 'o', 't', 'a', 't', 'o', 'r' ]
+
+const reversedString=reverseEl.join("");  //rotator
+
+if(string===reversedString){
+    return true;
+}
+return false;
+    
+}
+console.log(checkPalindrome("rotator")) //True
+
+//5.How to empty an array
+ // 1st method
+let arr=[2,34,5,6]
+arr=[];
+console.log(arr) // []
+console.log(arr.length) //0
+//2nd method
+const array=["sud","sudhanhsu"]
+array.length =0;
+console.log(array);  //[]
+console.log(array.length); //0
+
+//using splice method
+array.splice(0.array.length);
+
+
+//6.How do you combine two or more arrays?
+
+let array1=[2,34,5,6]
+let array2=[3,34,5,55];
+//using spread operator
+const combinedArray=[...array1,...array2]
+//using array.concat(method)
+const mergeResult = array1.concat(array2);
+console.log(combinedArray,mergeResult) //[ 2, 34, 5, 6, 3, 34, 5, 55 ] [ 2, 34, 5, 6, 3, 34, 5, 55 ]
+
+
+//7.how to combine two or more objects?
+const person = {
+    name: "sudhanshu",
+    age: 22
+}
+const jobs = {
+    job: "unemployed",
+    location: "India"
+}
+
+const me= {...person, ...jobs};
+
+console.log(me); //{ name: 'sudhanshu', age: 22, job: 'unemployed', location: 'India' }
+ 
+
+// 8.Remove duplicates from 2 arrays
+function uniquefromArrays(array1, array2){
+ let arr = [...array1, ...array2]
+ let unique = [...new Set(arr)];
+ return unique
+}
+console.log(uniquefromArrays([13,12,41,3], [22,3,4,13]))  //[ 13, 12, 41, 3, 22, 4 ]
+
+//9.How can you uppercase the first character in a string array
+
+ const str="sudhanhsu";
+// const str2=str.charAt(0).toUpperCase(); //S
+const str2=str.charAt(0).toUpperCase()+str.slice(1); //Sudhanshu
+ console.log(str2);
 
 
