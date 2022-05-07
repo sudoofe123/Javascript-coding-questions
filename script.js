@@ -129,6 +129,7 @@ const str2=str.charAt(0).toUpperCase()+str.slice(1); //Sudhanshu
  console.log(str2);
 
 
+
 const str = 'i am learning to code';
 
 //split the above string into an array of strings 
@@ -158,7 +159,35 @@ modifyArray(arr, function() {
 });
 
 
+//11.Remove the last N Characters from a String in JavaScript 
+// Write a function that takes a string (a) as argument
+// Remove the last 3 characters of a
+// Return the result
 
+function myFunction(a) {
+   return a.slice(0, -3);
+}
+myFunction('abcdefg')  //Expected 'abcd'
 
+myFunction('1234') //Expected '1'
 
+//12.Count number of negative values in array
 
+function myFunction(a) {
+   return a.filter((item) => item < 0).length;
+}
+myFunction([1,-2,2,-4])  //Expected 2
+
+myFunction([0,9,1]) //Expected 0
+
+ //method-2 using for loop
+
+function myFunction(a){
+   let  neg_count = 0;
+    for (let i = 0; i <a.length; i++) {
+        if (a[i] < 0)
+            neg_count++;
+    }
+    return neg_count;
+}
+myFunction([1,-2,2,-4])  //Expected 2
