@@ -205,3 +205,17 @@ function countVowel(str) {
 }
 const result = countVowel("vowel"); //2
 
+
+
+
+//14.count character in string
+function countCharacters(str){
+    const count={};
+    str.split("").forEach((char)=>{
+     count[char]=count[char]?(count[char]+1):1;
+     
+    })
+    return count;
+}
+
+console.log(countCharacters("sudhanshu"))   //{ s: 2, u: 2, d: 1, h: 2, a: 1, n: 1 }
