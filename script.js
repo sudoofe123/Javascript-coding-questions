@@ -191,3 +191,17 @@ function myFunction(a){
     return neg_count;
 }
 myFunction([1,-2,2,-4])  //Expected 2
+
+
+// 12. program to count the number of vowels in a string
+
+function countVowel(str) { 
+
+    // find the count of vowels
+    const count = str.match(/[aeiou]/gi).length;  //The pattern /[aeiou]/gi checks for all the vowels (case-insensitive) in a string
+
+    // return number of vowels
+    return count;
+}
+const result = countVowel("vowel"); //2
+
