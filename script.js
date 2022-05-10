@@ -193,7 +193,7 @@ function myFunction(a){
 myFunction([1,-2,2,-4])  //Expected 2
 
 
-// 12. program to count the number of vowels in a string
+// 13. program to count the number of vowels in a string
 
 function countVowel(str) { 
 
@@ -204,8 +204,6 @@ function countVowel(str) {
     return count;
 }
 const result = countVowel("vowel"); //2
-
-
 
 
 //14.count character in string
@@ -219,3 +217,31 @@ function countCharacters(str){
 }
 
 console.log(countCharacters("sudhanshu"))   //{ s: 2, u: 2, d: 1, h: 2, a: 1, n: 1 }
+
+//15 .creating range of numbers
+function myFunction(min, max) {
+let arr = [];
+for (let i = min; i <= max; i++) {
+arr.push(i);
+}
+return arr;
+}
+
+console.result=myFunction(5,10) //[5,6,7,8,9,10]
+console.result=myFunction(2,5) //[2,3,4,5]
+
+
+//16.Remove duplicates from string
+
+
+function removeDuplicates(str){
+    return  [...new Set(str.split(' '))].join(' ')
+    
+}
+console.log(removeDuplicates("alpha beta gamma delta gamma gamma delta delta beta sax beta"))
+//alpha beta gamma delta sax
+
+
+
+
+
