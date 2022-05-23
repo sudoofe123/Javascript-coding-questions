@@ -243,5 +243,13 @@ console.log(removeDuplicates("alpha beta gamma delta gamma gamma delta delta bet
 
 
 
+//17.how to remove space from a string 
+
+const str=" My name is sudhanshu ";
+console.log( str.split(' ').join('') );
+console.log( str.replace( /\s/g, '') );  //Mynameissudhanshu
+
+
+
 
 
